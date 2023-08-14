@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navi_graph"
+    app:startDestination="@id/naviMainFragment">
+
+
+    <fragment
+        android:id="@+id/naviMainFragment"
+        android:name="com.appsferry.app.navigation.NaviMainFragment"
+        android:label="NaviMainFragment">
+        <action
+            android:id="@+id/action_blankFragment_to_firstFragment"
+            app:destination="@id/storeTestFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+        <action
+            android:id="@+id/action_enter_env_fragment"
+            app:destination="@id/envTestFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+        <action
+            android:id="@+id/action_enter_parameter_fragment"
+            app:destination="@id/parameterTestFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+        <action
+            android:id="@+id/action_enter_finance_fragment"
+            app:destination="@id/financeTestFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+        <action
+            android:id="@+id/action_enter_upload_fragment"
+            app:destination="@id/uploadTestFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/parameterTestFragment"
+        android:name="com.appsferry.app.navigation.ParameterTestFragment"
+        android:label="ParameterTestFragment" />
+
+    <fragment
+        android:id="@+id/envTestFragment"
+        android:name="com.appsferry.app.navigation.EnvTestFragment"
+        android:label="EnvTestFragment" />
+
+    <fragment
+        android:id="@+id/storeTestFragment"
+        android:name="com.appsferry.app.navigation.StoreTestFragment"
+        android:label="StoreTestFragment"/>
+
+    <fragment
+        android:id="@+id/httpTestFragment"
+        android:name="com.appsferry.app.navigation.HttpTestFragment"
+        android:label="httpTestFragment"
+        tools:layout="@layout/fragment_http_test">
+        <argument
+            android:name="wwe"
+            app:argType="integer" />
+        <argument
+            android:name="we4t"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/financeTestFragment"
+        android:name="com.appsferry.app.navigation.finance.FinanceTestFragment"
+        android:label="financeTestFragment" >
+        <action
+            android:id="@+id/action_enter_recharge_fragment"
+            app:destination="@id/rechargeFragment"/>
+        <action
+            android:id="@+id/action_enter_vip_test_fragment"
+            app:destination="@id/vipMemberTestFragment" />
+        <action
+            android:id="@+id/action_enter_incomes_page"
+            app:destination="@id/financeIncomesFragment" />
+        <action
+            android:id="@+id/action_enter_currency_history_fragment"
+            app:destination="@id/currencyHistoryDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rechargeFragment"
+        android:name="com.appsferry.app.navigation.finance.RechargeFragment"
+        android:label="RechargeFragment" />
+    <fragment
+        android:id="@+id/vipMemberTestFragment"
+        android:name="com.appsferry.app.navigation.finance.VipMemberTestFragment"
+        android:label="VipMemberTestFragment" />
+    <fragment
+        android:id="@+id/financeIncomesFragment"
+        android:name="com.appsferry.app.navigation.finance.FinanceIncomesFragment"
+        android:label="FinanceIncomesFragment" />
+    <fragment
+        android:id="@+id/currencyHistoryDetailsFragment"
+        android:name="com.appsferry.app.navigation.finance.CurrencyHistoryDetailsFragment"
+        android:label="CurrencyHistoryDetailsFragment" />
+    <fragment
+        android:id="@+id/uploadTestFragment"
+        android:name="com.appsferry.app.navigation.UploadTestFragment"
+        android:label="UploadTestFragment" />
+</navigation>
